@@ -22,4 +22,21 @@
 ## 4. Google Compute Engine (GCP)
 - IaaS platform offered from Google
 - They use KVM as their hypervisor
-- 
+- Offers the same benefits as other cloud providers
+
+## 5. IBM Cloud virtual servers
+- They offer a mixture of public, private and hybrid cloud stacks
+- Biggest advantage is that users can choose a number of different hypervisors such as XenServer, VMware or Hyper-V hypervisors
+- Same benefits as other cloud providers, but price comes more on the end of the curve
+
+## 6. Oracle cloud compute Virtual Machines
+- Capable of supporting nested virtualizations
+- Also offers ARM based compute
+- Provides standard as well as dense IO/ High-performance instances. 
+
+## 7. Openstack
+- With openstack, you can basically become a cloud provider yourself by setting up an IaaS on bare metal machines
+- This software allows you to do everything a normal cloud offering company, from provisioning VM instances to managing them
+- This project was a joint effort between NASA and Rackspace
+- It contains a number of components which are dedicated to a certain feature or functionality such as Network, Storage, Orchestration and so on
+- It is open-source and supports most technological domains such as Data Science and Machine Learning
