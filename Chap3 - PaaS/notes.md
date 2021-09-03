@@ -15,6 +15,26 @@
 - Can be deployed on any IaaS platform such as AWS, GCP or Azure
 - Makes it easy for developers to use microservice architecture
 - Advantages include auto-scaling, logging, dynamic routing, portability, etc
-- Has two runtimes called "Cloud Foundry Application Runtime" and "Cloud Foundry Container Runtime"
+- Has two runtimes called "Cloud Foundry Application Runtime" (CFAR) and "Cloud Foundry Container Runtime" (CFCR)
 - Both of these tools are managed by [BOSH](https://bosh.io/docs/)
-- This tool can work on any IaaS platform
+- This tool can work on any IaaS platform. They are explained below:
+    1. ###  <b>CFAR</b>
+        * The CFAR platform manages the entire workflow of the application and provides the connections necessary for different services to work together
+        - The following [link](https://docs.cloudfoundry.org/concepts/architecture/) provides details of the architecture of CFAR
+    2. ### <b>CFCR</b>
+        - Allows the users to deploy their applications present inside a container
+        - Manages containers of a Kubernetes cluster
+        - This Kubernets cluster is then controlled by BOSH
+        - The following figure explains this concept clearly:
+        <p align="center"><img src="https://storageconsortium.de/content/sites/default/files/Bildschirmfoto%202018-10-19%20um%2011.48.55.jpg" align=""></p>
+        - As can be seen, BOSH and Kubernetes both work together. Kubernetes manages containers while BOSH manages machines on which Kubernetes is running
+- ### <b>KubeCF</b>
+    - [Kubernetes native](https://www.cloudfoundry.org/technology/kubecf/) version of CFAR, offering the benefits of Kubernetes combined with CFAR
+    - Two main components: [Quarks](https://www.cloudfoundry.org/blog/quarks-using-cloud-foundry-operator/) and [Eirini](https://www.cloudfoundry.org/projects/#application_runtime_pmc-subproject-eirini)
+
+## 2. OpenShift
+- [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift) is an Open source PaaS solution provided by Red Hat
+- Leading enterprise Kubernetes platform
+- Works on popular IaaS solutions such as AWS, Azure or GCP
+- Provides all the necessary technologies such as CI/CD, Monitoring all at one place
+- Optimized for developers to quickly deploy application to Kubernetes using Source-to-Image (S2I) framework
