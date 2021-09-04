@@ -38,3 +38,12 @@
 - Works on popular IaaS solutions such as AWS, Azure or GCP
 - Provides all the necessary technologies such as CI/CD, Monitoring all at one place
 - Optimized for developers to quickly deploy application to Kubernetes using Source-to-Image (S2I) framework
+<p align="center"><img src="https://www.tutorialspoint.com/openshift/images/openshift_container_platform_architecture.jpg" align=""></p>
+
+## 3. Heroku
+- Fully managed container-based cloud platform. This container is called <b>"dyno"</b>
+- Dyno can be scaled on-demand
+- It provides its own cloud environment, not connected to other cloud providers
+- Allows developers to rapidly deploy their applications to the cloud without worrying about setting up other depencencies
+- A file called [<b>"Procfile"</b>](https://devcenter.heroku.com/articles/procfile) contains all the commands which are executed on startup (similar to a dockerfile)
+<p align="center"><img src="https://www.salesforce.com/content/dam/web/en_us/www/images/heroku/heroku-card-scalable-web-apps.jpg" align=""></p>
