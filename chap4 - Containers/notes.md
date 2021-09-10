@@ -17,3 +17,12 @@
 - Once a container is started, the OS creates a separate namespace for it and isolates it from other processes
 - An image is like a blueprint which instructs how to create a container. Multiple containers can be created from a single image
 - For the OS, a container is just like any other program
+- A container has two important concepts which are mentioned below:
+    ### 1. <b>Namespaces</b>
+    - This is an abstraction layer in which all the system's resources reside.
+    - It behaves like a virtual isolation
+    - Each process lives inside a namespace
+    - To the running process, it can only see the resources assigned to it in it's namespace
+
+    ### 2. Cgroups
+    - 
