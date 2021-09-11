@@ -23,6 +23,16 @@
     - It behaves like a virtual isolation
     - Each process lives inside a namespace
     - To the running process, it can only see the resources assigned to it in it's namespace
-
-    ### 2. Cgroups
-    - 
+    - There are 6 types of namespaces
+    ### 2. <b>Cgroups</b>
+    - It controls how much resources a process can use
+    - Organizes and manages the resource allocation
+## Container runtime
+- A container by itself is nothing but a collection of different low level kernel resources bundled together into a single object
+- A container runtime allows to bundle these pieces together in a simple and reusable manner
+- This runtime follows industry standard, which means that it is portable across different infrastructure and OS
+- Some of these runtimes are listed below:
+    ## 1. runC
+    ## 2. containerd
+    ## 3. rkt
+    ## 4. CRIO-O
