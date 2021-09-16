@@ -31,8 +31,50 @@
 - A container by itself is nothing but a collection of different low level kernel resources bundled together into a single object
 - A container runtime allows to bundle these pieces together in a simple and reusable manner
 - This runtime follows industry standard, which means that it is portable across different infrastructure and OS
+- Container runtime abstracts the host system specific information and provides a consistent view across all hosts
+- There are two specifications which govern the use of container runtimes:
+    <br><br>
+    ### 1. <b>Open Container Initiative(OCI)</b>
+    - Define a set of protocols and standards on how to access the underlying host resources by the runtime
+    ### 2. <b>Container Runtime Interface(OCR)</b>
+    - Kubernetes also requires plumbing code to interact with the container runtime
+    - Since there are a lot of container runtimes in the market, therefore to allow kubernetes to support all of these they decided to create an interface which runtimes can support
+    <br><br>
 - Some of these runtimes are listed below:
     ## 1. runC
+    - runC is a container runtime created by Docker
+    - It takes care of all the plumbing details required for a container to interact with the Kernel's system resources
+    - Features of runC include native support for different computing architectures such as Arm, Intel, Qualcomm, DPDK, Windows
     ## 2. containerd
+    - It can be thought of as a wrapper on top of runC
+    - The idea is that runC offers direct communication with the Kernel. These include native syscalls or OS specific functionality
+    - To create an abstraction from these low level concepts, containerd was created
+    - This image offers a nice overview of where containerd fits:
+    <br><br><p align="center"><img src="https://i0.wp.com/www.docker.com/blog/wp-content/uploads/974cd631-b57e-470e-a944-78530aaa1a23-1.jpg?w=906&ssl=1" align=""></p>
+    - It works as a separate process, providing the bridge between Docker and runC
+    - It is OCI-compliant, meaning that other conainer technologies can also use it
+    - It provides APIs to manage, create and execute any container with the host system
     ## 3. rkt
+    - It is another runtime container runtime provided by Redhat
+    - Difference from docker is that it does not have any daemon like docker run, so each container is independent
+    - This project is unfortunately archived and not used anymore
     ## 4. CRIO-O
+    - It is an implementation of CRI
+    - Alternative to docker for kubernetes runtime
+    - This link gives a nice architectural overview:
+    <br><br><p align="center"><img src="https://cri-o.io/assets/images/architecture.png" align=""></p>
+## Containers vs VMs
+- In a VM, for each instance you spin up a dedicated VM for this. These VMs are running on a host machine and are managed by a Hypervisor
+- In Containers, each instance sits on top of an existing host, sharing the underlying host kernel's resources but logically separated
+- This image gives a nice architectural overview:
+    <br><br><p align="center"><img src="https://wiki.aquasec.com/download/attachments/2854029/docker-birthday-3-intro-to-docker-slides-18-638.jpg?version=1&modificationDate=1515522843003&api=v2" align=""></p>
+
+## Docker
+- It is a technology company which offers Docker containers as their product
+ <br><br><p align="center"><img src="https://wiki.aquasec.com/download/attachments/2854029/Docker.JPG?version=1&modificationDate=1515349366681&api=v2" align=""></p>
+
+## Benefits of containers
+- Fast to deploy
+- Elastic scaling
+- Less memory footprint against VMs
+- Portable across different environments
