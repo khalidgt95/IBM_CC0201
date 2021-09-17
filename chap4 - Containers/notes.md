@@ -5,13 +5,11 @@
 - Each container or application space is independent from each other, meaning that they do not know about other's existence
 - This segregation helps to isolate different components incase one of them fails
 - These containers all use the same underlying kernel who manages them
-
 ## Why do we need containers?
 - As more and more softwares shift to the cloud, there arises a very unique problem; How to write code on my laptop that can also work in a cloud hosted environment with different OS and hardware specifications?
 - Sepcifically, given a set different services communicating with each other, how make them robust with ever changing software landscape?
 - The following picture gives a visual representation of the problem faced by developers <br><br><p align="center"><img src="https://www.docker.com/blog/wp-content/uploads/2013/08/the_challenge.jpg" align=""></p>
 - To solve the above mentioned problems, developers can use <b>"Containers"</b> to wrap their application in such a way that everything required for the component is bundled together all in a single place. The following image illustrates this concept: <br><br><p align="center"><img src="https://courses.edx.org/assets/courseware/v1/ab813032f150e0d74d9016b2e8a55ed3/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/Docker_Container.jpeg" align=""></p>
-
 ## Basic Concepts
 - A container is created from an <b>Image</b>. This image contains all the instructions necessary to start and run the container.
 - Once a container is started, the OS creates a separate namespace for it and isolates it from other processes
@@ -68,7 +66,6 @@
 - In Containers, each instance sits on top of an existing host, sharing the underlying host kernel's resources but logically separated
 - This image gives a nice architectural overview:
     <br><br><p align="center"><img src="https://wiki.aquasec.com/download/attachments/2854029/docker-birthday-3-intro-to-docker-slides-18-638.jpg?version=1&modificationDate=1515522843003&api=v2" align=""></p>
-
 ## Docker
 - It is a technology company which offers Docker containers as their product
  <br><br><p align="center"><img src="https://wiki.aquasec.com/download/attachments/2854029/Docker.JPG?version=1&modificationDate=1515349366681&api=v2" align=""></p>
@@ -78,3 +75,8 @@
 - Elastic scaling
 - Less memory footprint against VMs
 - Portable across different environments
+# Project Moby
+- Created by docker and allows to create a container system by the user himself
+- User can create custom container systems similar to docker
+- Since container systems need a lot of plumbing code to acces host's resources, therefore moby provides a set of APIs so that the user does not have to do these tasks
+
