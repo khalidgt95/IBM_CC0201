@@ -33,5 +33,17 @@
 - The system docker daemon starts second docker daemon called <b>User Docker</b> that isolates system containers
 - This means that user containers have no way to access these services
 - The following picture explains this concept: <p align="center"><img src="https://courses.edx.org/assets/courseware/v1/fb5f9c500178d4fd6af74b1241ed05fa/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/Figure_6.4-_RancherOS_Architecture.png"  align=""></p>
-- 
-- 
+## 4. Ubuntu Core
+- Lightweight version of ubuntu specifically for embedded devices
+- Focuses more on security such as transactional updates, automated restore points and application snapshots
+- Designed to run on bare-metal as well as hosted solutions
+- Uses Apparmor and Seccomp for application security
+- Uses snap as the software manager
+- Integrates CI/CD pipeline
+## 5. VMware Photon
+- Provided by VMware and optimized for cloud-native applications
+- Can be used on VMware vSphere as well as on cloud computing platforms
+- Available in minimal as well as full version
+- Photon OS comes from VMware and optimized for VMware products
+- Uses yum-compatible package manager called Tiny DNF (tdnf)
+- Supports Kubernetes and Mesos
