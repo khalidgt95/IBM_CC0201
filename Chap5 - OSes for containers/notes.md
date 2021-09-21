@@ -29,5 +29,9 @@
 ## 3. Rancher OS
 - Another lightweight linux distribution, made entirely from containers
 - Smallest footprint among all OSes since it needs to run only docker. All other features are pulled dynamically by docker
+- Runs two separate docker instances, the first is docker daemon called <b>System Docker</b> which runs system containers such as <b>console</b>, <b>dhcp</b>, <b>syslog</b>
+- The system docker daemon starts second docker daemon called <b>User Docker</b> that isolates system containers
+- This means that user containers have no way to access these services
+- The following picture explains this concept: <p align="center"><img src="https://courses.edx.org/assets/courseware/v1/fb5f9c500178d4fd6af74b1241ed05fa/asset-v1:LinuxFoundationX+LFS151.x+2T2020+type@asset+block/Figure_6.4-_RancherOS_Architecture.png"  align=""></p>
 - 
 - 
