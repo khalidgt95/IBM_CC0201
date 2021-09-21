@@ -20,5 +20,14 @@
     ## 3. sys Mode
     - Traditional hard-disk install
 - Benefits of Alpine Linux include small size, increased security as well as portability across different hardware platforms such as Raspberry Pi
-## 2. Atomic Host
+## 2. Fedora CoreOS
+- Optimized to work with Kubernetes and designed to run containerized workloads
+- Spin-off from CoreOS container linux, which was desgined as a container native OS
+- Focuses on security
+- Can run in a clustered as well as a container environment
+- Can be launced on bare metal as well as PaaS environments
+## 3. Rancher OS
+- Another lightweight linux distribution, made entirely from containers
+- Smallest footprint among all OSes since it needs to run only docker. All other features are pulled dynamically by docker
+- 
 - 
